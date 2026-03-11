@@ -1,0 +1,25 @@
+FileWritter e BufferedWriter
+
+- Da mesma forma que tínhamos FileReader e BufferedReader:
+    - Nós temos FileWriter e BufferedWriter para escrever;
+    - E da mesma forma, BufferedWriter é mais rápido.
+		
+- Caso você instancie o FileWriter usando apenas o caminho como argumento:
+    - Ele cria um arquivo no caminho que você escolheu;
+    - Se o arquivo já existir, ele será zerado;
+
+- Uma maneira de evitar que o arquivo seja zerado é:		
+    - Instanciando o FileWriter usando o caminho e a palavra true como argumento;
+    - Ele acrescenta ao arquivo existente;
+    - Tudo que for escrito nesse Writer será acrescentado no final do arquivo;
+
+- Podemos escrever num arquivo usando um Vetor de String.
+- Iniciamos esse vetor com frases que queremos escrever no arquivo.
+
+- Assim como FileReader e BufferedReader, nós criamos um Try With Resources.
+- bufferedWriter.write(); escreve algo numa linha;
+- bufferedWritter.newLine(); cria outra linha;
+
+- Se formos prosseguir com o exemplo de escrever num arquivo usando um Vetor de String:
+    - Dentro do Try, nós criamos um For Each e repetimos os métodos write(); newLine();
+		

@@ -1,0 +1,23 @@
+Tratamento de Arquivos
+
+- Para ler um arquivo precisamos de 3 passos:
+    - Uso das bibliotecas File, Scanner e IOException;
+    - File é uma representação abstrata de arquivos;
+    - Para ler um arquivo usamos o Scanner;
+    - Para realizar o processo de leitura, precisamos tratar exceções
+    - Usamos a SubClasse IOException;
+
+- Para iniciar a leitura de um arquivo instanciamos um objeto do tipo File.
+- No construtor colocamos o caminho do arquivo como argumento.
+- Declaramos uma variável ponteiro do tipo Scanner.
+
+- Agora dentro de um bloco Try instanciamos um objeto do tipo Scanner:
+    - Como Argumento colocamos o nome do objeto de tipo File;
+    - Para ler todas as linhas do arquivo, criamos um loop:
+        - Enquanto scanner.hasNextLine();
+    - Por fim, imprimimos scanner.nextLine();
+
+- No bloco Catch, tratamos exceções do tipo IOException.
+- É uma boa prática fechar o scanner, fazemos isso dentro do bloco Finally.
+- Outra boa prática é ver se o scanner foi instanciado então:
+    - se scanner for diferente de null, nós fechamos scanner;

@@ -1,0 +1,14 @@
+Manipulando Diretórios com File
+
+- Podemos usar a classe File para manipular diretórios.
+- Dentro de uma String, colocamos o caminho que queremos analisar.
+
+- Instanciamos um objeto File usando esse String caminho como argumento do construtor.
+- Instanciamos um vetor do tipo File que recebe File caminho.listFile();
+- Como argumento do método listFile(); usamos a função lambda File::isDirectory.
+- isDirectory para analisar se é um diretório, podemos usar outros "is".
+
+- Para imprimir os diretórios usamos um For Each que contem o vetor de diretórios.
+
+- O método .getName após o print de um caminho, pega apenas o nome do arquivo.
+- Há vários .get na Classe File

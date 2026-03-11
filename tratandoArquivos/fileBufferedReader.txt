@@ -1,0 +1,42 @@
+File Reader
+
+- É um dos métodos de leitura de arquivo.
+- File Reader é um Stream de leitura de caracteres:
+    - Em resumo, ele lê caracter por caracter;
+    - Stream é uma sequencia;
+
+- Estabelecemos uma sequencia de leitura e a partir da necessidade, lemos o arquivo.
+
+Buffered Reader
+
+- É uma classe para otimizarmos o File Reader.
+- Otimização usando buffer de memória, ele é bem mais rápido.
+
+Como Ler Arquivos
+
+- Primeiramente, essa maneira é bem complexa e cheia de regras.
+
+- Criamos uma String que vai conter o caminho do arquivo.
+- Criamos variáveis ponteiro do tipo FileReader e BufferedReader contendo null.
+
+- Dentro de um bloco Try:
+    - fileReader recebe caminho como argumento no construtor;
+    - bufferedReader por sua vez recebe fileReader como argumento no construtor;
+    - Criamos outra String que recebe o método bufferedReader.readLine();
+    - Em resumo, essa String vai ler uma linha;
+    - Se essa linha for a ultima, ele retorna null;
+
+    - Dentro de um loop while, verificamos se String linha é nula;
+    - Imprimimos essa linha caso não seja nula;
+    - Por fim, essa mesma String linha recebe novamente readLine();
+    - Esse loop se repete enquanto linha não é nula;
+
+- Agora, capturamos a exceção IOException no bloco Catch.
+
+- A parte mais complexa desse método de leitura começa agora.
+- Dentro no bloco Finally vamos fechar bufferedReader e fileReader.
+- Porém, ao fechar pode ocorrer outra Exception então criamos outro bloco Try:
+    - Dentro desse try, caso bufferedReader e fileReader tenham null;
+    - Fechamos bufferedReader e fileReader;
+
+- Outra vez, criamos outro bloco Catch para capturar Exception caso ao fechar bufferedReader e fileReader haja alguma exceção.

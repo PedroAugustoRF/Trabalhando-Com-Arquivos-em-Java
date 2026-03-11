@@ -1,0 +1,19 @@
+Try With Resources
+
+- É um bloco Try "aprimorado".
+- Ele é mais otimizado e melhor para manipular Streams.
+- Na sintaxe, declaramos recursos.
+- Garante com que os recursos sejam encerrados no final.
+
+- Sintaxe em resumo:
+    - try (<Recursos>) {}
+    - Instanciamos um BufferedReader e FileReader aqui;
+
+- Nesse método, não precisamos fazer um Try Catch dentro do Finally.
+
+- Resumindo tudo, com esse método de leitura nós:
+    - Instanciamos o BufferedReader e FileReader no cabeçalho do Try;
+    - A lógica para leitura é a mesma: 
+        - String linha recebe bufferedReader.readLine();
+        - readLine(); lê a linha, se for a ultima retorna null;
+        - enquanto linha não for nulo, readLine(); lê a próxima linha; 
